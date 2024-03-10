@@ -1,0 +1,28 @@
+{
+	"name": "Debian",
+	"image": "ghcr.io/prulloac/base-devcontainer:latest",
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": {
+			"installTools": true,
+			"version": "latest"
+		},
+        "ghcr.io/prulloac/devcontainer-features/chezmoi:1": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"GitHub.copilot-labs",
+				"GitHub.vscode-pull-request-github",
+				"github.vscode-github-actions",
+				"bierner.github-markdown-preview",
+				"mhutchie.git-graph",
+				"foam.foam-vscode",
+				"yzhang.markdown-all-in-one",
+				"donjayamanne.python-extension-pack"
+			]
+		}
+	},
+	"updateContentCommand": "chezmoi init prulloac && chezmoi apply"
+}
